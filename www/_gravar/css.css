@@ -1,0 +1,53 @@
+BODY{font:14px Verdana;color:gray}
+DIV{font:14px Verdana;color:gray}
+TD{font:14px Verdana;color:gray}
+A{text-decoration:none;color:steelblue}
+A:hover{color:navy}
+FORM{display:inline}
+
+.menu_vertical{font:bold 14px Verdana;text-decoration:none;color:#063F3F}
+.menu_vertical:hover{color:steelblue}
+
+.submenu_vertical{font:14px Verdana;text-decoration:none;color:navy}
+.submenu_vertical:hover{color:steelblue}
+
+.menu_retratil{font:bold 14px Verdana;text-decoration:none;color:#063F3F;padding-left:2}
+.menu_retratil:hover{color:steelblue}
+
+.submenu_retratil{font:14px Verdana;text-decoration:none;color:navy;padding-left:10}
+.submenu_retratil:hover{color:steelblue}
+
+.menu_horizontal{font:bold 14px Verdana;text-decoration:none;color:gray}
+.menu_horizontal:hover{color:steelblue}
+
+.menu_box{position:relative;display:block;font:14px Verdana;color:white}
+.menu_box:hover{color:steelblue}
+.submenu_box{font:13px Verdana;color:dimgray}
+.submenu_box:hover{color:steelblue}
+
+.caixa{background:white;text-align:left;padding:2;border:dotted 1px gray}
+
+.titulo{font:bold 14px Verdana;color:dimgray}
+
+.controle{font-weight:bold;color:navy}
+.controle:hover{color:steelblue}
+
+.categoria{color:steelblue}
+.categoria:hover{color:navy}
+
+textarea{border:1px solid gray;background-color:whitesmoke;font:12px Verdana}
+select{border:1px solid gray;background:whitesmoke;font:12px Verdana}
+.text{border:1px solid gray;background:whitesmoke;font:11px Verdana;height:18}
+.button{border:solid 1px gray;background:#D4D0C8;font:bold 11px Verdana;height:19}
+.buscador{color:gray;font:13px Verdana}
+.botao{border:outset 1px}
+.hidden{width:0;height:0}
+.radio{height:13}
+
+.cor1{background:white}
+.cor2{background:whitesmoke}
+.cor3{background:gainsboro}
+.cor4{background:silver}
+
+.camada{visibility:hidden;border:outset 2px;position:absolute;z-index:1;cursor:default;left:-1000;top:-1000}
+.barra{height:14}

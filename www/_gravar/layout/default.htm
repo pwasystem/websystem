@@ -1,0 +1,32 @@
+<HTML>
+<!--
+Functions (< ? = $function ? >)
+	banner('category',width,height,id,popup) ..	Returns a registered banner
+	content ...................................Write page content
+	copy ......................................	Protects against copying page
+	date ......................................	Writes date
+	domain ....................................Write website domain
+	head ......................................	Adds the page header
+	name ......................................	Write the name of the page
+	search ....................................	Write the search box
+	views .....................................	Displays page views
+-->
+	<?=$head?>
+	<BODY topmargin=0 leftmargin=0 marginheight=0 marginwidth=0 bgcolor=white background="<?=banner('fundo_pagina',0,0,0,2)?>" <?=$copy?>>
+		<TABLE border=0 bordercolor=red cellpadding=0 cellspacing=0 width=1000 height=100% align=center bgcolor=white>
+			<TBODY>
+				<TR align=right>
+					<TD rowspan=2 height=60><?=banner('topo',214,41,0,0)?><BR><SPAN style='color:silver;font:9px Verdana'><?=$date?></SPAN></TD>
+					<TD align=right><?=$menu_box?></TD>
+				</TR><TR>
+					<TD align=right><?=str_replace('size=8','size=15',str_replace('class=text','style="border:dashed 1px silver;font:12px verdana;color:gray"',$search))?></TD>				
+				</TR><TR>
+					<TD colspan=2 valign=top height=100% style='border-top:dotted 1px gray;padding:10'><SPAN class=titulo><?=$name?></SPAN><BR><BR><?=$content?></TD>
+				</TR><TR height=20>
+					<TD style='border-top:dotted 1px gray;color:gray;font-size:10px' colspan=2 align=center><BR><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt = "Creative Commons License" style = "border-width: 0" src = "http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"><BR></a><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">WebSystem</span> Luiz Roberto Nogueira Junior is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"> License Creative Commons Attribution-non-Commercial Share-ShareAlike 3.0 License</a>. <br> based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://websystem.sourceforge.net" rel="dct: source"> websystem.sourceforge.net </a>. © 2000-2011 WebSystem. All rights reserved.
+</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+	</BODY>
+</HTML>

@@ -1,0 +1,50 @@
+version: "3.9"
+services:
+ #NGINX
+ nginx:
+  build: ./server/nginx/
+  ports:
+  - 80:80  
+  volumes:
+  - './www/:/var/www/html/' 
+  networks:
+  - app-network
+ 
+ #PHP
+ php:
+  build: ./server/php/
+  expose:
+  - 9000
+  volumes:
+  - './www/:/var/www/html/'
+  networks:
+  - app-network
+ 
+ #MYSQL
+ db:
+  image: mysql:5.7
+  command: mysqld --default-authentication-plugin=mysql_native_password
+  environment:
+   MYSQL_ROOT_PASSWORD: root
+   MYSQL_DATABASE: websystem
+   MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  ports:
+  - '3306:3306'
+  volumes:
+  - './server/db/data:/var/lib/mysql'
+  - './server/db/my.cnf:/etc/mysql/conf.d/my.cnf'
+  - './server/db/sql:/docker-entrypoint-initdb.d'
+  networks:
+  - app-network
+
+#NETWORKS
+networks:
+ app-network:
+  driver: bridge
+
+#VOLUMES
+#volumes:
+ # dbdata:
+  #  driver: local
+
+#docker-compose down && cls && docker-compose up -d --force-recreate --build php nginx db
